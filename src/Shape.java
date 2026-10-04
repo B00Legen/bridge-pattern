@@ -1,6 +1,6 @@
 public abstract class Shape {
 	private final int id;
-	private Renderer renderer;
+	protected Renderer renderer;
 	protected Shape(int id, Renderer renderer) {
 		this.id = id;
 		setImplementation(renderer);

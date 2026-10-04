@@ -18,7 +18,7 @@
 ## Implementation References
 | Component | Location |
 |:---:|:---:|
-| Bridge field | `src/Shape.java` -- `private Renderer renderer` |
+| Bridge field | `src/Shape.java` -- `protected Renderer renderer` |
 | `execute()` | `src/Shape.java`, implemented inside `src/Circle.java` and `src/Square.java` |
 | `setImplementation()` | `src/Shape.java` |
 | T5 check | `src/Main.java` -- T5 section |

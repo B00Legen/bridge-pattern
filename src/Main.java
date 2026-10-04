@@ -95,7 +95,7 @@ public class Main {
 			boolean sameObject = original == circle;
 			boolean sameId = originalId == circle.getId();
 			boolean sameSize = originalSize == circle.getSize();
-			boolean stateUnchanged = sameSize && sameId
+			boolean stateUnchanged = sameSize && sameId;
 			
 			boolean passed = sameObject && stateUnchanged && before.equals(expected1) && after.equals(expected2);
 			if (passed) tester++;
