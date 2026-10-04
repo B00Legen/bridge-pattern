@@ -43,3 +43,4 @@ sameId=true
 sameSize=true
 before=VECTOR circle radius=2
 after=RASTER circle radius=2
+![Terminal Example](example_output.png)

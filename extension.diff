@@ -1,0 +1,41 @@
+diff --git a/README.md b/README.md
+index 6166cb1..f75da09 100644
+--- a/README.md
++++ b/README.md
+@@ -18,7 +18,7 @@
+ ## Implementation References
+ | Component | Location |
+ |:---:|:---:|
+-| Bridge field | `src/Shape.java` -- `private Renderer renderer` |
++| Bridge field | `src/Shape.java` -- `protected Renderer renderer` |
+ | `execute()` | `src/Shape.java`, implemented inside `src/Circle.java` and `src/Square.java` |
+ | `setImplementation()` | `src/Shape.java` |
+ | T5 check | `src/Main.java` -- T5 section |
+diff --git a/out/Main.class b/out/Main.class
+index 14805fb..8b7fda4 100644
+Binary files a/out/Main.class and b/out/Main.class differ
+diff --git a/src/Main.java b/src/Main.java
+index 3cd952a..601cef9 100644
+--- a/src/Main.java
++++ b/src/Main.java
+@@ -95,7 +95,7 @@ public static void demo () {
+ 			boolean sameObject = original == circle;
+ 			boolean sameId = originalId == circle.getId();
+ 			boolean sameSize = originalSize == circle.getSize();
+-			boolean stateUnchanged = sameSize && sameId
++			boolean stateUnchanged = sameSize && sameId;
+ 			
+ 			boolean passed = sameObject && stateUnchanged && before.equals(expected1) && after.equals(expected2);
+ 			if (passed) tester++;
+diff --git a/src/Shape.java b/src/Shape.java
+index 7c973b8..d07f9e9 100644
+--- a/src/Shape.java
++++ b/src/Shape.java
+@@ -1,6 +1,6 @@
+ public abstract class Shape {
+ 	private final int id;
+-	private Renderer renderer;
++	protected Renderer renderer;
+ 	protected Shape(int id, Renderer renderer) {
+ 		this.id = id;
+ 		setImplementation(renderer);
