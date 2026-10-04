@@ -7,7 +7,7 @@ public class Main {
 	public static void demo () {
 		Renderer vector = new VectorRenderer();
 		Renderer raster = new RasterRenderer();
-		// Renderer ascii = new AsciiRenderer();
+		Renderer ascii = new AsciiRenderer();
 		int tester = 0;
 		
 		{ // T1
@@ -114,8 +114,8 @@ public class Main {
 			}
 			System.out.println();
 		}
-		/*{ // T6
-			Shape circle = new circle(6, 2, ascii);
+		{ // T6
+			Shape circle = new Circle(6, 2, ascii);
 			String expected = "ASCII circle radius=2";
 			String result = circle.execute();
 			
@@ -147,7 +147,7 @@ public class Main {
 				System.out.print("    expected=" + expected);
 			}
 			System.out.println();
-		} */
+		}
 		
 		System.out.println("SUMMARY: " + tester + "/7 " +
 						(tester == 7 ? "PASS" : "FAIL"));

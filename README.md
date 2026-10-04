@@ -3,7 +3,7 @@
 ### Group: SE-2538
 ### Topic letter: A (Drawing)
 ### Repository: [Repo URL](https://github.com/B00Legen/bridge-pattern)
-### Base commit hash: `HASH`
+### Base commit hash: `fd220f5`
 ## Class Role Map
 | Role | Class name | Source path |
 |:---:|:---:|:---:|
